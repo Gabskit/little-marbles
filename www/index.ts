@@ -23,7 +23,7 @@ Alpine.start()
 var engine = Engine.create()
 
 var render = Render.create({
-    element: document.body,
+    element: document.getElementById("main") as HTMLElement,
     engine: engine
 })
 
