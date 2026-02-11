@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+    "target": "es6",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "outDir": "www/js",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+},
+    "include": [
+        "www/index.ts"
+    ]
+}
