@@ -1,7 +1,7 @@
 //Dependencys
 import Matter from "matter-js";
 import Alpine from "alpinejs";
-
+import "./style.css"
 //declare window
 declare global {
     interface Window {
@@ -26,6 +26,8 @@ var render = Render.create({
     element: document.getElementById("main") as HTMLElement,
     engine: engine
 })
+
+Render.run(render)
 
 //page routing
 document.addEventListener("DOMContentLoaded", () => {
