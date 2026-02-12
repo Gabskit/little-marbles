@@ -1,4 +1,5 @@
 //Dependencys
+import "./style.css"
 import Matter from "matter-js";
 import Alpine from "alpinejs";
 
