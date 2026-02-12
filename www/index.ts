@@ -1,7 +1,7 @@
 //Dependencys
 import Matter from "matter-js";
 import Alpine from "alpinejs";
-import "./style.css"
+
 //declare window
 declare global {
     interface Window {

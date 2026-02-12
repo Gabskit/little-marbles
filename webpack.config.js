@@ -1,8 +1,8 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development', // Cambia a 'production' para el build final
-  entry: './www/index.ts', // Tu archivo principal de TS
+  mode: 'development',
+  entry: './www/index.ts',
   module: {
     rules: [
       {
@@ -11,28 +11,20 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/i, // New rule for CSS
+        test: /\.css$/i,
         use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: ['tailwindcss', 'autoprefixer'],
-              },
-            },
-          },
+          'style-loader',   // 3. Puts CSS into the DOM
+          'css-loader',     // 2. Reads the CSS
+          'postcss-loader', // 1. Processes Tailwind/daisyUI
         ],
       },
     ],
   },
   resolve: {
-    extensions: ['.ts', '.js', '.json'],
+    extensions: ['.ts', '.js'],
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'www/js'), // Lo guarda en www/js/bundle.js
+    path: path.resolve(__dirname, 'www/js'),
   },
-  devtool: 'inline-source-map', // Útil para debugear en el móvil
 };

@@ -1,15 +1,7 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./www/**/*.{html,ts}", // Important: this tells Tailwind where to find your classes
-  ],
+  content: ["./www/**/*.{html,js,ts}"], // Look inside www for html and ts files
   theme: {
     extend: {},
   },
-  plugins: [
-    require("daisyui"),
-  ],
-  daisyui: {
-    themes: ["all"], // You can add or remove themes here
-  },
+  plugins: [require("daisyui")],
 }
