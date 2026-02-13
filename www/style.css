@@ -2,3 +2,11 @@
 @plugin "daisyui" {
     themes: all; /* This unlocks everything! */
 }
+
+.bar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
