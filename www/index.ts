@@ -1,6 +1,4 @@
 //Dependencys
-import "./style.css"
-import 'flyonui/flyonui'
 import Matter from "matter-js";
 import Alpine from "alpinejs";
 
@@ -31,32 +29,3 @@ var render = Render.create({
 
 Render.run(render)
 
-//page routing
-document.addEventListener("DOMContentLoaded", () => {
-  const pages = document.querySelectorAll("[data-role='page']") as NodeListOf<HTMLElement>
-  pages.forEach(page => {
-    page.style.display = "none"
-  })
-  pages[0].style.display = "block"
-});
-
-document.addEventListener("click", (event) => {
-    const target = event.target as HTMLElement
-    const href = target.getAttribute("href")
-    if (href) {
-        mvtopg(href)
-    }
-})
-
-function mvtopg(id: string): void {
-    const pages = document.querySelectorAll("[data-role='page']") as NodeListOf<HTMLElement>
-    pages.forEach(page => {
-        const idpg = page.getAttribute("id")
-        const idpgprocessed = "#" + idpg
-        if (idpgprocessed === id) {
-            page.style.display = "block"
-        } else {
-            page.style.display = "none"
-        }
-    })
-}

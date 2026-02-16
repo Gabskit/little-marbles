@@ -10,14 +10,6 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
-      {
-        test: /\.css$/i,
-        use: [
-          'style-loader',   // 3. Puts CSS into the DOM
-          'css-loader',     // 2. Reads the CSS
-          'postcss-loader', // 1. Processes Tailwind/daisyUI
-        ],
-      },
     ],
   },
   resolve: {

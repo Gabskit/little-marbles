@@ -1,15 +1,19 @@
-@import "tailwindcss";
-
-/* daisyUI v5+ (Tailwind v4 compatible) */
-@plugin "daisyui" {
-  themes: all;
+.taber{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
 }
-
-/* FlyonUI */
-@plugin "flyonui" {
-  themes: all;
+.tab{
+  margin: 0;
+  appearance: none;
 }
-@plugin "@iconify/tailwind4";
-
-/* Required for FlyonUI interactive components */
-@source "../node_modules/flyonui/dist/js/*.js"; 
+.tab:active{
+  border: 0 0 0.5em 0 solid #fff;
+}
+.glass-bg{
+  background: linear-gradient(hsla(0,0,100,0.9) 0%,hsla(0,0,0,0) 10%,hsla(0,0,0,0) 95%,hsla(0,0,100,0.8) 100%) padding-box;
+  backdrop-filter: blur(10px);
+}
