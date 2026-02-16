@@ -1,5 +1,6 @@
 //Dependencys
 import "./style.css"
+import 'flyonui/flyonui'
 import Matter from "matter-js";
 import Alpine from "alpinejs";
 

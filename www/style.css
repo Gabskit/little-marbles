@@ -1,12 +1,15 @@
 @import "tailwindcss";
+
+/* daisyUI v5+ (Tailwind v4 compatible) */
 @plugin "daisyui" {
-    themes: all; /* This unlocks everything! */
+  themes: all;
 }
 
-.bar{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+/* FlyonUI */
+@plugin "flyonui" {
+  themes: all;
 }
+@plugin "@iconify/tailwind4";
+
+/* Required for FlyonUI interactive components */
+@source "../node_modules/flyonui/dist/js/*.js"; 
