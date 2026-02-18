@@ -1,15 +1,13 @@
 {
-    "compilerOptions": {
-    "target": "es6",
-    "module": "es2015",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
     "moduleResolution": "node",
-    "outDir": "www/js",
     "strict": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
-},
-    "include": [
-        "www/index.ts"
-    ]
+    "lib": ["DOM", "DOM.Iterable", "ESNext"]
+  },
+  "include": ["index.ts"]
 }
