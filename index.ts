@@ -1,6 +1,14 @@
 //Dependencys
 import "./style.css"
-import "flyonui/flyonui"
+import "./cdn/jquery.js"
+import "./cdn/jquery.mobile-1.3.2.min.js"
+import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
+import '@shoelace-style/shoelace/dist/themes/light.css';
+import '@shoelace-style/shoelace/dist/shoelace.js';
+
+// Set the base path for Shoelace assets
+setBasePath('/www/');
+
 import Matter from "matter-js";
 import Alpine from "alpinejs";
 
@@ -8,6 +16,7 @@ import Alpine from "alpinejs";
 declare global {
     interface Window {
         Alpine: any;
+        $: any;
     }
 }
 
