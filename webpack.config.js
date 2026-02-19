@@ -19,20 +19,6 @@ module.exports = {
           'css-loader',
         ]
       },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: '[name][ext]'
-        }
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: '[name][ext]'
-        }
-      }
     ],
   },
   resolve: {
@@ -43,7 +29,7 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'www/js'),
+    path: path.resolve(__dirname, 'www/assets'),
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -53,7 +39,7 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, 'node_modules/@shoelace-style/shoelace/dist/assets'),
-          to: path.resolve(__dirname, 'www/shoelace')
+          to: path.resolve(__dirname, 'www/assets')
         }
       ]
     })
