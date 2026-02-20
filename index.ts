@@ -5,9 +5,6 @@ import { registerIconLibrary } from '@shoelace-style/shoelace/dist/utilities/ico
 //alert("EJECUTANDO BUNDLE");
 //document.body.style.backgroundColor = "purple";
 //Dependencys
-import "./style.css"
-import "./cdn/jquery.js"
-import "./cdn/jquery.mobile-1.3.2.min.js"
 import '@shoelace-style/shoelace/dist/themes/light.css';
 import '@shoelace-style/shoelace/dist/shoelace.js';
 import Matter from "matter-js";
@@ -18,10 +15,10 @@ import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.j
 setBasePath("/")
 
 //declare window
+declare var $: any;
 declare global {
     interface Window {
         Alpine: any;
-        $: any;
     }
 }
 //console.log("REGISTRANDO COMPONENTES...");
@@ -54,3 +51,4 @@ window.onerror = function(msg, url, line) {
         <p>En: ${url} (Línea ${line})</p>
     </div>`;
 };
+

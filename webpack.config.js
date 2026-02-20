@@ -40,6 +40,10 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'node_modules/@shoelace-style/shoelace/dist/assets'),
           to: path.resolve(__dirname, 'www/assets')
+        },
+        {
+          from: path.resolve(__dirname, 'cdn'),
+          to: path.resolve(__dirname, 'www/assets')
         }
       ]
     })
