@@ -24,12 +24,12 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
     alias: {
-      'jquery': path.resolve(__dirname, 'cdn/jquery.js'),
+      'jquery': path.resolve(__dirname, 'www/js/bundle.js'),
     }
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'www/assets'),
+    path: path.resolve(__dirname, 'www/js'),
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -37,14 +37,7 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        {
-          from: path.resolve(__dirname, 'node_modules/@shoelace-style/shoelace/dist/assets'),
-          to: path.resolve(__dirname, 'www/assets')
-        },
-        {
-          from: path.resolve(__dirname, 'cdn'),
-          to: path.resolve(__dirname, 'www/assets')
-        }
+        
       ]
     })
   ]

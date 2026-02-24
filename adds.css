@@ -1,0 +1,15 @@
+.barui{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.rainbow-border{
+    border: 1em solid transparent;
+    background:  linear-gradient(to right, #f00 0%,#ff0 20%,#0f0 40%,#0ff 60%, #00f 80%, #f0f 100%) border-box;
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+}
+.squircle{
+    corner-shape: squircle;
+}

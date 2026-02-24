@@ -4,23 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/main.bundle.css">
-    <script src="assets/jquery.js"></script>
-    <script src="assets/jquery.mobile-1.3.2.min.js"></script>
     <link rel="stylesheet" href="assets/jquery.mobile-1.3.2.min.css">
     <link rel="stylesheet" href="assets/jquery.mobile.structure-1.3.2.min.css">
-    <link rel="stylesheet" href="assets/jquery.mobile.theme-1.3.2.min.css">
+    <link rel="stylesheet" href="assets/jquery.mobile.theme-1.3.2.min.css">            
+    <link rel="stylesheet" href="assets/main.bundle.css">
     <script type="module" src="assets/bundle.js" defer></script>
+    <script src="assets/jquery.js"></script>
+    <script src="assets/jquery.mobile-1.3.2.min.js"></script>
+    <style>
+        /* 1. Corta cualquier cosa que intente expandir la página de más */
+.ui-page{
+    overflow: hidden !important; 
+    width: 100% !important;
+    max-width: 100vw !important;
+}
+    </style>
 </head>
 <body>
     <div data-role="page" id="main">
-        <div data-role="header">
-            <h1>h</h1>
+        <div class="barui" data-role="header" data-position="fixed" data-fullscreen="true">
+            <h1>h1</h1>
+            
         </div>
-        <div data-role="content">
-            <sl-button>c</sl-button>
+        <div data-role="content" style="padding: 15px !important;">
+            <button>h</button>
         </div>
-        
+        <div data-role="footer" data-position="fixed" data-fullscreen="true">
+            
+        </div>
     </div>
     
 </body>

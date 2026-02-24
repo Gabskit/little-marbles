@@ -15,7 +15,6 @@
   "type": "commonjs",
   "main": "www/index.ts",
   "dependencies": {
-    "@shoelace-style/shoelace": "^2.15.0",
     "alpinejs": "^3.15.8",
     "matter-js": "^0.20.0"
   },
