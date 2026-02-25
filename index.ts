@@ -3,8 +3,9 @@
 import './cdn/semantic.min.js'
 import './cdn/semantic.min.css'
 import './adds.css'
-import Matter from "matter-js";
+import * as Matter from "matter-js";
 import Alpine from "alpinejs";
+import p5 from 'p5';
 
 //declare window
 declare global {
@@ -12,27 +13,51 @@ declare global {
         Alpine: any;
     }
 }
-//console.log("REGISTRANDO COMPONENTES...");
-//alert("JS funcionavndo");
 //init libs
-var Engine = Matter.Engine,
-    Render = Matter.Render,
-    Runner = Matter.Runner,
-    Bodies = Matter.Bodies,
-    Composite = Matter.Composite
+var { Engine, Render, Runner, Bodies, Composite } = Matter;
 
 window.Alpine = Alpine
 Alpine.start()
 
 //engines start
-var engine = Engine.create()
+var engine
+var worlda
+var balla: any
+var ballb: any
+var spike: any
+var ground: any
 
-var render = Render.create({
-    element: document.getElementById("main") as HTMLElement,
-    engine: engine
-})
+const sketch = (p: p5) => {
+    p.setup = () => {
+        var canvas = p.createCanvas(400,400)
+        canvas.parent("con")
+        engine = Engine.create()
+        worlda = engine.world
+        balla = Bodies.circle(200,100,20)
+        ballb = Bodies.circle(200,200,20)
+        //spike = Bodies.polygon(300,100,3,20)
+        ground = Bodies.rectangle(200,380,400,20,{isStatic:true})
+        Composite.add(worlda, [balla,ballb,ground])
+        Runner.run(engine)
+    }
+    p.draw = () => {
+        p.background(126)
+        p.circle(balla.position.x, balla.position.y, 20)
+        p.circle(ballb.position.x, ballb.position.y, 20)
+        //p.polygon(spike.position.x, spike.position.y, 3, 20)
+        p.rect(ground.position.x, ground.position.y, 400, 20)
+    }
+}
 
-//Render.run(render)
+new p5(sketch)
+
+/*Composite.add(worlda, [
+    balla,
+    ballb,
+    spike,
+    ground
+])*/
+
 
 //error shower
 window.onerror = function(msg, url, line) {

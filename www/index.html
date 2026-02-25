@@ -8,8 +8,6 @@
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.3.2.min.js"></script>
     <link rel="stylesheet" href="js/jquery.mobile-1.3.2.min.css">
-    <!--link rel="stylesheet" href="js/jquery.mobile.structure-1.3.2.min.css">
-    <link rel="stylesheet" href="js/jquery.mobile.theme-1.3.2.min.css"-->
     <style>
         /* 1. Corta cualquier cosa que intente expandir la página de más */
 .ui-page{
@@ -26,13 +24,23 @@
             
         </div>
         <div data-role="content" style="padding: 15px !important;">
-            <button>k</button>
+            <a class="squircle" data-role="button" href="#test">test</a>
         </div>
         <div data-role="footer" data-position="fixed" data-fullscreen="true">
             
         </div>
+        
     </div>
-    
+    <div data-role="page" id="test">
+            <div class="barui" data-role="header" data-position="fixed" data-fullscreen="true">
+                <h1>Test game</h1>
+            </div>
+            <div data-role="content">
+                <div id="con">
+
+                </div>
+            </div>
+        </div>
     <script src="js/bundle.js"></script>
 </body>
 </html>

@@ -15,8 +15,10 @@
   "type": "commonjs",
   "main": "www/index.ts",
   "dependencies": {
+    "@types/p5": "^1.7.7",
     "alpinejs": "^3.15.8",
-    "matter-js": "^0.20.0"
+    "matter-js": "^0.20.0",
+    "p5": "^2.2.2"
   },
   "devDependencies": {
     "@types/alpinejs": "^3.13.11",
