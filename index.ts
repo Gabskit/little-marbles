@@ -1,21 +1,12 @@
 
-// Esto confirmará si el código llega a ejecutarse
-//alert("EJECUTANDO BUNDLE");
-//document.body.style.backgroundColor = "purple";
-//Dependencys
-import './cdn/jquery.js'
-import './cdn/jquery.mobile-1.3.2.js'
+//dependency
 import './cdn/semantic.min.js'
-import './cdn/jquery.mobile-1.3.2.css'
-import './cdn/jquery.mobile.structure-1.3.2.css'
-import './cdn/jquery.mobile.theme-1.3.2.css'
 import './cdn/semantic.min.css'
 import './adds.css'
 import Matter from "matter-js";
 import Alpine from "alpinejs";
 
 //declare window
-declare var $: any;
 declare global {
     interface Window {
         Alpine: any;

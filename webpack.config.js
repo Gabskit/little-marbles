@@ -1,6 +1,7 @@
-const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -18,14 +19,11 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           'css-loader',
         ]
-      },
+      }
     ],
   },
   resolve: {
     extensions: ['.ts', '.js'],
-    alias: {
-      'jquery': path.resolve(__dirname, 'www/js/bundle.js'),
-    }
   },
   output: {
     filename: 'bundle.js',
@@ -37,7 +35,7 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        
+        { from: path.resolve(__dirname, "cdn"), to: path.resolve(__dirname, "www/js")}
       ]
     })
   ]
